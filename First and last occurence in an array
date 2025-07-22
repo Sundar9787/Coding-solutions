@@ -1,0 +1,24 @@
+arr = [2, 4, 5, 4, 6, 7, 4, 8]
+target = 9
+n=len(arr)
+def first_last(n,target):
+    first=-1
+    last = -1
+    for i in range(n):
+        if arr[i]== target:
+            if first == -1:
+                first = i 
+            last = i 
+            
+    if first == -1:
+        print("There is no such elements found in the list")
+    elif first == last:
+        print(f"There only one element in the list and is found at position {first}")
+    else:
+        print(f'First found at position {first}. Last found position:{last}')
+        
+    
+
+first_last(n,target)
+    
+    
