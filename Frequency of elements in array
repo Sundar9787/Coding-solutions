@@ -1,0 +1,19 @@
+arr=[1,2,3,4,1,2,5]
+def count_frequency(arr):
+    seen =[]
+    freq={}
+    for num in arr:
+        if num not in seen:
+            seen.append(num)
+            freq[num]=1 
+        else:
+            freq[num]= freq[num]+1
+    
+    for keys,value in freq.items():
+        print(f'{keys}:{value}')
+    return
+
+print(count_frequency(arr))
+            
+            
+    
