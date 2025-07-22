@@ -1,0 +1,13 @@
+arr=[1,2,3,4,5]
+k=int(input("Enter no of times: "))
+direction=input('Direction: ')
+def rotate_array(arr,k,direction):
+    if direction == 'right':
+        rotated_array=arr[-k:] + arr[:-k]
+        return rotated_array
+    else:
+        rotated_array = arr[k:] + arr[:k]
+        return rotated_array
+    
+    
+print(rotate_array(arr,k,direction))
