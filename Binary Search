@@ -1,0 +1,20 @@
+arr=[2,4,6,8,10,12]
+target=10
+def binary_search(arr,target):
+    low=0 
+    high = len(arr)-1
+    while low <= high:
+        mid = (low+high) //2 
+        
+        if arr[mid]==target:
+            return f'Element found at index {mid}'
+            
+        elif arr[mid]<target:
+            low = mid+1 
+            
+        elif arr[mid] > target:
+            high = mid-1
+            
+    return "Element not found"
+    
+print(binary_search(arr,target))
